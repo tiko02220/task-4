@@ -14,10 +14,10 @@ class Main {
             System.out.println("Enter X/O");
             String user = in.next();
             System.out.println("Enter Index");
-            if (user.equals("X")) {
+            if (user.equals("X")||user.equals("x")) {
                 bord[in.nextInt()][in.nextInt()] = "X";
                 printBord();
-            }else if (user.equals("O")) {
+            }else if (user.equals("O")||user.equals("o")) {
                 bord[in.nextInt()][in.nextInt()] = "O";
                 printBord();
             }
