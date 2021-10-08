@@ -10,7 +10,7 @@ class Main {
         b = in.nextInt();
         bord = new String[a][b];
         printBord();
-        for (int i = 0;i<=a*b;i++) {
+        for (int i = 1;i<=a*b;i++) {
             System.out.println("Enter X/O");
             String user = in.next();
             System.out.println("Enter Index");
@@ -21,18 +21,17 @@ class Main {
                 bord[in.nextInt()][in.nextInt()] = "O";
                 printBord();
             }
-        }
+        }System.out.println("Grid is full");
     }
-
     private static void printBord() {
         for (int c = 0; c < bord.length; c++) {
             for (int d = 0; d < bord[c].length; d++) {
-if(bord [c][d]== null) {
-            bord [c][d] = "-";
-                  }
-            System.out.print(" | "+ bord[c][d] );
-               }
-            System.out.println(" | ");
-          }
+                if(bord [c][d]== null) {
+                  bord [c][d] = "-";
+                }
+                 System.out.print(" | "+ bord[c][d] );
+            }
+                  System.out.println(" | ");
+        }
     }
 }
